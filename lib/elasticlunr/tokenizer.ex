@@ -1,7 +1,7 @@
 defmodule Elasticlunr.Tokenizer do
   alias Elasticlunr.Token
 
-  @default_separator ~r/[\s\-]+/
+  @default_separator ~r/[\s\-]+/u
 
   @spec tokenize(binary() | number(), Regex.t()) :: list(Token.t())
   def tokenize(str, separator \\ @default_separator)
